@@ -42,6 +42,7 @@ interface PageProps {
 // Backend base URL
 // ----------------------
 const baseURL = "http://localhost:8080/api";
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL!;
 
 export default function SavingsPage({ walletId: propWalletId, savingsHistory: propSavingsHistory, onSavingsUpdate }: PageProps) {
   // Get walletId from prop, localStorage, or URL params
